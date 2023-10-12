@@ -1,0 +1,103 @@
+{"intents": [
+  {
+    "tag": "greeting",
+    "patterns": ["Hi", "Hello", "Hey", "How's it going"],
+    "responses": ["Hello! What would you like to watch today?"]
+  },
+  {
+    "tag": "recommend_movie",
+    "patterns": ["Recommend a movie", "Suggest a movie", "What should I watch?"],
+    "responses": ["Sure, I'd love to help you find a great movie. Can you tell me your preferences? Are you in the mood for a specific genre or director?"]
+  },
+  {
+    "tag": "different_suggestion,",
+    "patterns": ["I don't want to watch that one", "Can you suggest a different one?", "Actually how about a {genre} movie"],
+    "responses": ["Sorry about that. Lets get a new pick!"]
+  },
+  {
+    "tag": "director_suggestions",
+    "patterns": ["Movies by a director", "Can you suggest a director?", "Pick a director"],
+    "responses": ["Quentin Tarantino", "Christopher Nolan", "Martin Scorsese", "Steven Spielberg", "Alfred Hitchcock", "Stanley Kubrick", "Wes Anderson", "David Fincher", "James Cameron", "Tim Burton"]
+  },
+  {
+    "tag": "director_movies",
+    "patterns": ["Movies by {director}", "Recommend a movie by {director}", "Pick a movie by {director}"],
+    "responses": {
+      "Quentin Tarantino": [
+        "Pulp Fiction", "Kill Bill: Vol. 1", "Kill Bill: Vol. 2", "Reservoir Dogs", "Inglourious Basterds", "Django Unchained", "Once Upon a Time in Hollywood", "The Hateful Eight"
+      ],
+      "Martin Scorsese": [
+        "Goodfellas", "Taxi Driver", "The Wolf of Wall Street", "Raging Bull", "The Irishman", "Casino", "The Departed", "Shutter Island"
+      ],
+      "Christopher Nolan": [
+        "Inception", "The Dark Knight", "Interstellar", "Dunkirk", "Memento", "The Prestige", "The Dark Knight Rises", "Insomnia"
+      ],
+      "Tim Burton": [
+        "Edward Scissorhands", "The Nightmare Before Christmas", "Beetlejuice", "Corpse Bride", "Batman", "Sweeney Todd: The Demon Barber of Fleet Street", "Ed Wood", "Big Fish"
+      ],
+      "Steven Spielberg": [
+        "Jurassic Park", "Schindler's List", "E.T. the Extra-Terrestrial", "Saving Private Ryan", "Jaws", "Close Encounters of the Third Kind", "Raiders of the Lost Ark", "Catch Me If You Can"
+      ],
+      "Alfred Hitchcock": [
+        "Psycho", "Vertigo", "Rear Window", "North by Northwest", "The Birds", "Strangers on a Train", "Dial M for Murder", "Notorious"
+      ],
+      "Stanley Kubrick": [
+        "The Shining", "2001: A Space Odyssey", "A Clockwork Orange", "Full Metal Jacket", "Dr. Strangelove", "Eyes Wide Shut", "Barry Lyndon", "The Killing"
+      ],
+      "Wes Anderson": [
+        "The Grand Budapest Hotel", "Moonrise Kingdom", "The Royal Tenenbaums", "Isle of Dogs", "The Darjeeling Limited", "Rushmore", "Fantastic Mr. Fox", "Bottle Rocket"
+      ],
+      "David Fincher": [
+        "Fight Club", "Se7en", "The Social Network", "Gone Girl", "The Girl with the Dragon Tattoo", "Panic Room", "Zodiac", "Alien 3"
+      ],
+      "James Cameron": [
+        "Avatar", "Titanic", "Terminator 2: Judgment Day", "Aliens", "The Abyss", "True Lies", "The Terminator", "The Terminator 2"
+      ]
+    }
+  },
+  {
+    "tag": "animated_movies_responses",
+    "patterns": ["Top animated movies", "Animated films", "List of classic animated movies"],
+    "responses": ["Spirited Away", "Toy Story", "The Lion King", "Finding Nemo", "Shrek", "Wall-E", "Ratatouille", "Zootopia", "Coco", "Moana", "Frozen", "Beauty and the Beast", "Aladdin", "Up", "How to Train Your Dragon", "Despicable Me", "Kung Fu Panda", "The Incredibles", "Inside Out", "The Little Mermaid", "Bambi", "Snow White and the Seven Dwarfs", "Cinderella", "Pocahontas", "Mulan"]
+  },
+  {
+    "tag": "fallback",
+    "patterns": ["I don't know", "I'm not sure", "I want something else", "Tell me something else"],
+    "responses": ["I'm here to help you with movie recommendations. If you're unsure, feel free to ask about movies, directors, or genres."]
+  },
+  {
+    "tag": "action_movies_responses",
+    "patterns": ["Top action movies of all time", "Best action films", "List of classic action movies"],
+    "responses": ["Die Hard", "Aliens", "Seven Samurai", "The Wild Bunch", "Police Story", "Enter the Dragon", "Mad Max 2: The Road Warrior", "Hard Boiled", "Terminator 2: Judgment Day", "Raiders of the Lost Ark", "Kill Bill", "Face/off", "The Terminator", "Ong-Bak", "Predator", "The Bourne Ultimatum", "Once Upon A Time in China II", "First Blood", "Robocop", "Once Upon A Time in the West", "The Expendables", "The Boondock Saints", "Inception", "Lethal Weapon", "The Killer", "John Wick", "Speed"]
+  },
+  {
+    "tag": "horror_movies_responses",
+    "patterns": ["Top horror movies", "Scary films", "List of classic horror movies"],
+    "responses": ["The Shining", "Psycho", "The Exorcist", "Halloween", "A Nightmare on Elm Street", "The Texas Chain Saw Massacre", "Get Out", "The Babadook", "Hereditary", "The Conjuring", "It", "Cabin in the Woods", "The Witch", "A Quiet Place", "Don't Breathe", "The Descent", "Saw", "The Ring", "The Grudge", "The Others", "The Sixth Sense", "Rosemary's Baby", "Paranormal Activity", "Crimson Peak", "The Orphanage"]
+   },
+  {
+    "tag": "romance_movies_responses",
+    "patterns": ["Top romance movies", "Romantic films", "List of classic romance movies"],
+    "responses": ["Titanic", "The Notebook", "Pride and Prejudice", "La La Land", "The Fault in Our Stars", "Eternal Sunshine of the Spotless Mind", "Before Sunrise", "The Princess Bride", "500 Days of Summer", "Casablanca", "Gone with the Wind", "The Shape of Water", "The Grand Budapest Hotel", "Amélie", "Silver Linings Playbook", "The Graduate", "When Harry Met Sally", "The Fault in Our Stars", "Pretty Woman", "Ghost", "Dirty Dancing", "Jerry Maguire", "Notting Hill", "The Bridges of Madison County", "A Star Is Born"]
+  },
+  {
+    "tag": "comedy_movies_responses",
+    "patterns": ["Top comedy movies", "Funny films", "List of classic comedy movies"],
+    "responses": ["Anchorman: The Legend of Ron Burgundy", "Superbad", "Step Brothers", "This Is Spinal Tap", "Airplane!", "Bridesmaids", "Ferris Bueller's Day Off", "Ghostbusters", "The Hangover", "Monty Python and the Holy Grail", "Napoleon Dynamite", "Old School", "The Princess Bride", "Shaun of the Dead", "Super Troopers", "The Big Lebowski", "Caddyshack", "Dumb and Dumber", "Groundhog Day", "Hot Fuzz", "The Grand Budapest Hotel", "The Great Outdoors", "The Jerk", "The Pink Panther", "Zoolander", "Tropic Thunder"]
+  },
+  {
+    "tag": "documentary_movies_responses",
+    "patterns": ["Top documentary films", "Documentary recommendations", "List of popular documentaries"],
+    "responses": ["March of the Penguins", "An Inconvenient Truth", "Blackfish", "Bowling for Columbine", "The Act of Killing", "Man on Wire", "Super Size Me", "The Fog of War", "Fahrenheit 9/11", "Jiro Dreams of Sushi", "20 Feet from Stardom", "The Cove", "Won't You Be My Neighbor?", "Icarus", "RBG", "Searching for Sugar Man", "Free Solo", "The King of Kong: A Fistful of Quarters", "Amy", "Exit Through the Gift Shop", "Three Identical Strangers", "Faces Places", "Minding the Gap", "Won't You Be My Neighbor?", "Free Solo", "Apollo 11"]
+  },
+  {
+    "tag": "crime_movies_responses",
+    "patterns": ["Top crime movies", "Crime films", "List of classic crime movies"],
+    "responses": ["The Godfather", "Pulp Fiction", "Goodfellas", "Heat", "Se7en", "The Departed", "Reservoir Dogs", "The Silence of the Lambs", "The Usual Suspects", "American Psycho", "Training Day", "Scarface", "L.A. Confidential", "Fargo", "Blow", "No Country for Old Men", "The Town", "A Clockwork Orange", "The Shawshank Redemption", "Donnie Brasco", "Drive", "American History X", "The French Connection", "Gone Girl", "Zodiac"]
+  },
+  {
+    "tag": "war_movies_responses",
+    "patterns": ["Top war movies", "War films", "List of classic war movies"],
+    "responses": ["Saving Private Ryan", "Full Metal Jacket", "Apocalypse Now", "Platoon", "Black Hawk Down", "1917", "Dunkirk", "Hacksaw Ridge", "We Were Soldiers", "Paths of Glory", "The Hurt Locker", "Patton"]
+  }]
+}
